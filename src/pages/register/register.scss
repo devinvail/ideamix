@@ -1,0 +1,42 @@
+page-register {
+    
+        .scroll-content {
+            background-color: map-get($colors, primary);
+        }
+    
+        .toolbar-background {
+            background-color: #e06179 !important;
+        }
+    
+        ion-item {
+    
+            background-color: transparent !important;
+            padding: 0 !important;
+    
+            .item-inner {
+                border: none !important;
+                padding: 0 !important;
+                color: #fff;
+            }
+    
+            input {
+                color: #cecece;    
+                width: 100% !important;
+                background-color: #e06179 !important;
+                padding: 10px !important;
+                margin: 0 0 10px 0 !important;
+                box-shadow: inset 1px 1px 2px 0px #c75363;
+            }
+    
+            ion-label {
+                font-weight: bold;
+            }
+    
+        }
+    
+        .submit-warning {
+            text-align: center;
+            color: #fff;
+        }
+    
+    }

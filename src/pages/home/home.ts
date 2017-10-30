@@ -1,14 +1,22 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+    tab1Root: string = 'NoticesPage';
+    tab2Root: string = 'ChatPage';
 
-  }
+    constructor() {
+
+    }
+
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad HomePage');
+    }
 
 }

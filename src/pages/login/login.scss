@@ -1,0 +1,49 @@
+page-login {
+    
+        .scroll-content {
+            background-color: map-get($colors, primary);
+        }
+    
+        ion-item {
+    
+            background-color: transparent !important;
+            padding: 0 !important;
+    
+            .item-inner {
+                border: none !important;
+                padding: 0 !important;
+            }
+    
+            input {
+                color: #221b5f;    
+                width: 100% !important;
+                background-color: #ddd !important;
+                padding: 10px !important;
+                margin: 10px 0 10px 0 !important;
+                box-shadow: inset 1px 1px 2px 0px ddd;
+            }
+    
+            ::-webkit-input-placeholder {
+              color: #cecece !important;
+            }
+    
+        }
+    
+        ion-footer {
+            background-color: ddd;
+        }
+    
+        .login-button {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #7d7c7c;
+        }
+    
+        .error-logging-in {
+            background-color: #f7f07b;
+            padding: 10px;
+            text-align: center;
+            border: 2px solid map-get($colors, danger);
+        }
+    
+    }

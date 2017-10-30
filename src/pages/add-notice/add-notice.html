@@ -1,0 +1,32 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+
+        <ion-title>Add Notice</ion-title>
+
+        <ion-buttons right>
+            <button ion-button icon-only class="close-modal-button" (click)="close()"><ion-icon name="close"></ion-icon></button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <ion-card>
+
+        <ion-item class="title-input">
+            <ion-label>Title:</ion-label>
+            <ion-input type="text" [(ngModel)]="title" placeholder="(required)"></ion-input>
+        </ion-item>
+
+        <ion-item class="message-input">
+            <ion-textarea [(ngModel)]="message" placeholder="type your message..."></ion-textarea>
+        </ion-item>
+
+        <button ion-button class="save-notice-button" (click)="saveNotice()">Save Notice</button>
+
+    </ion-card>
+
+</ion-content>

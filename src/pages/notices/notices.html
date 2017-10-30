@@ -1,0 +1,60 @@
+<ion-header no-border>
+
+    <ion-navbar color="primary">
+        <ion-title>Notices</ion-title>
+
+        <ion-buttons left>
+            <button (click)="logout()" class="logout-button" ion-button icon-only><ion-icon name="log-out"></ion-icon></button>
+        </ion-buttons>
+
+        <ion-buttons right>
+            <button (click)="openAddNoticePage()" class="add-notice-button" ion-button icon-only><ion-icon name="add"></ion-icon></button>
+        </ion-buttons>
+
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <ion-list class="notice-list" no-lines>
+
+        <ion-card class="notice-cards" *ngFor="let notice of notices">
+
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="https://api.adorable.io/avatars/100/{{notice.author}}">
+                </ion-avatar>
+                <h2>{{notice.author}}</h2>
+            </ion-item>
+
+            <ion-card-content>
+
+                <div class="mega-text">
+                    <p>{{notice.title}}</p>
+                </div>
+
+                <p class="message-content">{{notice.message}}</p>
+
+            </ion-card-content>
+
+            <div *ngIf="notice.author == userProvider?.currentUser?.user_id" class="control-buttons">
+                
+                <button (click)="deleteNotice(notice)" color="light" class="delete-notice-button" ion-button icon-left clear small>
+                    <ion-icon name="trash"></ion-icon>
+                    <div>delete</div>
+                </button>
+        
+                <button (click)="openAddNoticePage(notice)" color="primary" class="edit-notice-button" ion-button icon-left clear small>
+                    <ion-icon name="book"></ion-icon>
+                    <div>edit</div>
+                </button>
+        
+            </div>
+
+        </ion-card>
+
+    </ion-list>
+
+</ion-content>
