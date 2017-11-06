@@ -34,6 +34,8 @@ export class RegisterPage {
 
     createAccount(): void {
 
+        console.log('registering');
+
         if(this.registerForm.valid){
 
             this.presentLoading();

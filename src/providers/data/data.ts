@@ -13,8 +13,6 @@ export class DataProvider {
 
     initDatabase(remote): void {
 
-      console.log('making db');
-
         this.db = new PouchDB('hangzdb', {
             auto_compaction: true
         });

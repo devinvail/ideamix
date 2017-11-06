@@ -15,7 +15,7 @@ export class AuthProvider {
 
     authenticate(credentials){
 
-        return this.http.post('http://localhost:8080/' + 'auth/login', credentials).map(res => res.json());
+        return this.http.post(SERVER_ADDRESS + 'auth/login', credentials).map(res => res.json());
 
     }
 

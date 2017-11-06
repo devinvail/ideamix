@@ -30,7 +30,6 @@ export class NoticesProvider {
     }
 
     saveNotice(notice): void {
-
         if(notice.doc){
 
             let updatedDoc = notice.doc;
@@ -42,6 +41,7 @@ export class NoticesProvider {
             this.dataProvider.updateDoc(updatedDoc);
 
         } else {
+
             this.dataProvider.createDoc({
                 title: notice.title,
                 message: notice.message,

@@ -5,7 +5,7 @@ page-register {
         }
     
         .toolbar-background {
-            background-color: #e06179 !important;
+            background-color: map-get($colors, secondary) !important;
         }
     
         ion-item {
@@ -22,10 +22,10 @@ page-register {
             input {
                 color: #cecece;    
                 width: 100% !important;
-                background-color: #e06179 !important;
+                background-color: map-get($colors, light) !important;
                 padding: 10px !important;
                 margin: 0 0 10px 0 !important;
-                box-shadow: inset 1px 1px 2px 0px #c75363;
+                box-shadow: inset 1px 1px 2px 0px map-get($colors, light);
             }
     
             ion-label {
